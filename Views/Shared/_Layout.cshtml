@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CoffeeStore</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div class="bg-dark text-white p-2">
+            <span class="navbar-brand ml-2">Highlands Coffee</span>
+        </div>
+        <div class="row m-1 p-1">
+            <div id="genres" class="col-3">
+                <p>
+                    Welcome to Highlands Coffee !
+                </p>
+                <vc:genre-navigation />
+            </div>
+            <div class="col-9">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
